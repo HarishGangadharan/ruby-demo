@@ -1,0 +1,50 @@
+
+
+<h2 style="text-align:center">Login</h2>
+<form action="/sessions" method="POST" style="text-align:center">
+<input type='hidden' name='authenticity_token' value='<%= form_authenticity_token%>'>
+<div style='margin: 30px;'>
+<label>Username</label>
+<input type='email' name="login[email]" placeholder='email'>
+</div>
+<div>
+<label>Password</label>
+<input type='password' name="login[password]" placeholder='password'>
+</div>
+<div style='margin: 30px;'>
+<input type='submit' name='submit' class='submit'>
+</div>
+</form>
+
+
+<h2 style="text-align:center">Registration</h2>
+
+<form action="/users" method="POST" style="text-align:center">
+<input type='hidden' name='authenticity_token' value='<%= form_authenticity_token%>'>
+
+
+<div style='margin: 30px;'>
+<label>Username</label>
+<input type='name' name="user[name]" placeholder='name' style='margin-left: 5rem;'>
+</div>
+
+ <input type='hidden' name="user[is_admin]" placeholder='name' style='margin-left: 5rem;' value=false>
+
+<div style='margin: 30px;'>
+<label>Email</label>
+<input type='email' name="user[email]" placeholder='email' style='margin-left: 7rem;'>
+</div>
+<div style='margin: 30px;'>
+<label>Password</label>
+<input type='password' name="user[password]" placeholder='password' style='margin-left: 5rem;'>
+</div>
+<div style='margin: 30px;'>
+<label>Re-Enter Password</label>
+<input type='password' name="user[password_confirmation]" placeholder='password' style='margin-left: 1rem;'>
+</div>
+
+
+<div style='margin: 30px;'>
+<input type='submit' name='submit' class='submit'>
+</div>
+</form>

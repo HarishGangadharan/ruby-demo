@@ -1,0 +1,39 @@
+<%= form_for @product do |f| %>
+
+  <h1 style="text-align:center">Create new Product</h1>
+  <div style="text-align:center;margin:30px">
+  <div>
+  <%= f.label :name %>
+  <span style="margin-left: 5rem;">
+  <%= f.text_field :name %>
+  </span>
+</div>
+</div>
+<div style="text-align:center;margin:30px">
+
+<div>
+  <%= f.label :description %>
+  <span style="margin-left: 2.53rem;">
+
+  <%= f.text_area :description %>
+  </span>
+
+</div>
+</div>
+
+<div style="text-align:center;margin:30px">
+
+<div>
+  <%= f.label :price %>
+  <span style="margin-left: 5rem;">
+
+  <%= f.number_field :price %>
+  </span>
+
+</div>
+</div>
+
+<div style="text-align:center;margin:3px">
+  <%= f.submit %>
+</div>
+<% end %>
